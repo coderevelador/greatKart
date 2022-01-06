@@ -13,7 +13,7 @@
     <div class="card">
         <div class="card-body">
             <h4 class="card-title mb-4"> Biling Address</h4>
-            <form action="" method="post">
+            <form action="{% url 'place_order' %}" method="POST">
                 {% csrf_token %}
                 <div class="form-row">
                     <div class="col form-group">
@@ -27,18 +27,18 @@
                 </div>
                 <div class="form-row">
                     <div class="col form-group">
-                        <label for="">Email</label>
-                        <input type="email" class="form-control" name="email" required>
+                        <label for="">Contact No</label>
+                        <input type="text" class="form-control" name="phone" required>
                     </div>
                     <div class="col form-group">
-                        <label for="">Contact No</label>
-                        <input type="text" class="form-control" name="contact_no" required>
+                        <label for="">Email</label>
+                        <input type="email" class="form-control" name="email" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col form-group">
                         <label for="">Address Line</label>
-                        <textarea name ="address"  rows="2" class="form-control"></textarea>
+                        <textarea name ="address_line1"  rows="2" class="form-control"></textarea>
                     </div>
                     <div class="col form-group">
                         <label for="">Pincode</label>
@@ -120,17 +120,17 @@
                 
                     </tbody>
                     </table>
-                <button type="submit" name="submit" class="btn btn-primary btn-block" >Place Order</button>
+                <button type="submit" class="btn btn-primary btn-block" >Place Order</button>
                 <a href="{% url 'store' %}" class="btn btn-light btn-block">Continue Shopping</a>
             </div> <!-- card-body.// -->
-        </form>
+        
             </div> <!-- card.// -->
     
     </aside> <!-- col.// -->
     
     
     </div> <!-- row.// -->
-
+</form>
     <!-- ============================ COMPONENT 1 END .// ================================= -->
     
     </div> <!-- container .//  -->

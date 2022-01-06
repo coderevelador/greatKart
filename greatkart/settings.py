@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'accounts',
     'store',
     'carts',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -136,6 +137,12 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/'media'
+
+# Razorpay Keys
+
+RAZORPAY_API_KEY ='rzp_test_M5w6wquYBvXaNT'
+RAZORPAY_API_SECRET_KEY = 'Du93jiAcGj9MtPLOUqURElRj'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
